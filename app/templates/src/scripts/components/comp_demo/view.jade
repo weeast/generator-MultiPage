@@ -1,0 +1,22 @@
+
+//- 比赛-即将开始
+
+each item in data
+    -var team1 = item.team1, team2 = item.team2;
+    div.md-match-progress(class="#{className}")
+        i.icon-in-progress
+        div.match-progress-title
+            a.progress-title(href="javascript:;") #{item.name}
+        div.match-progress-cont
+            a.team-info(href=team1.link)
+                img.team-info-icon(src="#{team1.icon}")
+                span.team-info-name #{team1.name}
+                span.team-info-data #{team1.data}
+            span.match-time
+                span.data-time #{item.time}
+                a.go-guess(href="javascript:;") 去竞猜
+            a.team-info(href=team2.link)
+                img.team-info-icon(src="#{team2.icon}")
+                span.team-info-name #{team2.name}
+                span.team-info-data #{team2.data}
+

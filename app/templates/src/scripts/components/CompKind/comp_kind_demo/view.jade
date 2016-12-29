@@ -1,0 +1,25 @@
+.md-team-intro
+    .pic-wrap
+        .pic-col: img(src=icon,alt=name)
+        .name-col
+            p.name #{name}
+            p.group #{group}
+    .intro-wrap
+        .intro-col.rank
+            p.value NO.#{rank}
+            p.key 排名
+        .intro-col.score
+            p.value #{score}
+            p.key 积分
+        .intro-col.win-rate
+            p.value #{winRate}
+            p.key 胜率           
+        .intro-col.total-game
+            p.value #{totalComps}
+            p.key 累计单场
+        .intro-col.outcome.last
+            p.value #{win}-#{flat}-#{lose}
+            p.key 胜/负/平
+    a.ui-button.focus-btn(href="javascript:;")
+        span.btn-mask
+        span.btn-txt + 关注

@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+    head
+        title #{title} components units test
+body(style="background-color: #0e1116;color:#b1bfc2;font-family:'Microsoft YaHei'")
+    h1 #{title} Index
+    h2 Pages
+    .page-container
+        i(style="display: table;")
+        -for (var category in group)
+            ul(style="float:left;width:500px;height:230px;line-height:22px")
+                li.title: h3 #{category}
+                -for (var page in group[category])
+                    li.page: a(href=page,style="color:#b1bfc2;text-decoration:none") #{group[category][page]}(#{page})
+        i(style="clear:both;display: table;")
+    h2 Components
+    ul
+        each component in components
+            li: a(href="/dir/#{component}",style="color:#b1bfc2;text-decoration:none") #{component}
+    h2 Plugins
+    ul
+        each plugin in plugins
+            li: a(href="/__plugins__/#{plugin}.html",style="color:#b1bfc2;text-decoration:none") #{plugin}
+    h2 Widgets
+    ul
+        each widget in widgets
+            li: a(href="/__widgets__/#{widget}.html",style="color:#b1bfc2;text-decoration:none") #{widget}

@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/**
+ * 比赛-即将开始
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2016-06-28 14:47:51
+ */
+
+@import url('../../../less/_mixins.less');
+
+
+.md-match-progress{
+    width: 270px;
+    height: 160px;
+    margin-bottom: 20px;
+    background: @cold-color-3;
+    position: relative;
+    
+    .icon-in-progress{
+        display: block;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(images/icon-ahead.png) no-repeat 0 0;
+    }
+
+    .match-progress-title{
+        height: 35px;
+        line-height: 35px;
+        border-bottom: 1px solid @cold-color-1;
+
+        .progress-title{
+            display: block;
+            width: 210px;
+            .text-overflow();
+            margin-left: 55px;
+            text-decoration: none;
+            font-family: 'Microsoft YaHei';
+            font-size: 12px;
+            color: @cold-color-6;
+        }
+    }
+
+    .match-progress-cont{
+        height: 125px;
+        padding: 20px;
+
+        .team-info{
+            text-decoration: none;
+            display: block;
+            width: 71px;
+            float: left;
+            text-align: center;
+
+            .team-info-icon{
+                width: 40px;
+                height: 40px;
+                border: none;
+            }
+
+            .team-info-name{
+                display: block;
+                width: 100%;
+                font-family: 'Microsoft YaHei';
+                font-size: 14px;
+                color: @cold-color-7;
+                margin-top: 2px;
+            }
+
+            .team-info-data{
+                display: block;
+                width: 100%;
+                font-family: 'Microsoft YaHei';
+                font-size: 12px;
+                color: @theme-color-1;
+            }
+        }
+
+        .match-time{
+            display: block;
+            width: 88px;
+            float: left;
+            text-align: center;
+
+            .data-time{
+                display: block;
+                width: 100%;
+                font-size: 12px;
+                color: @cold-color-5;
+                margin-top: 8px;
+
+                .time-label{
+                    font-size: 14px;
+                    color: @cold-color-7;
+                }
+            }
+
+            .go-guess{
+                display: block;
+                width: 100%;
+                margin-top: 5px;
+                text-decoration: none;
+                color: @light-color-2;
+
+                &:hover{
+                    text-decoration: underline;
+                    color: @light-color-1;
+                }
+            }
+        }
+    }
+}

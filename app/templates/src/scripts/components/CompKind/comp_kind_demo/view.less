@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/**
+ * 战队简介
+ * @authors weeast (weeast.cd@gmail.com)
+ * @date    2016-06-28 10:24:58
+ */
+
+ @import "../../../../less/_mixins.less";
+ 
+.md-team-intro{
+    position: relative;
+    .clearfix;
+    .size(1140px,100px);
+    background: @cold-color-3;
+    .pic-wrap{
+        float: left;
+        .size(350px, 100px);
+        padding: 20px 0 20px 40px;
+    }
+    .pic-col{
+        float: left;
+        width: 64px;
+        margin-right: 20px;
+        img{
+            width: 64px;
+        }
+    }
+    .name-col{
+        float: left;
+        width: 220px;
+        padding-top: 7px;
+        .name{
+            color: @light-color-1;
+            font-size: 18px;
+            line-height: 35px;
+        }
+        .group{
+            color: @cold-color-5;
+            font-size: 12px;
+        }
+    }
+    .intro-wrap{
+        float: left;
+        height: 100px;
+        padding: 30px 0;
+    }
+    .intro-col{
+        position: relative;
+        float: left;
+        padding: 0 19px;
+        .value{
+            color: @cold-color-7;
+            font-size: 18px;
+            line-height: 18px;
+            margin-bottom: 15px;
+        }
+        .key{
+            color: @cold-color-5;
+            font-size: 12px;
+            line-height: 12px;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            display: inline-block;
+            height: 30px;
+            right: 0;
+            top: 10px;
+            border-left: 1px solid @gray-color-1;
+        }
+        &.last:after{
+            display: none;
+        }
+    }
+    .focus-btn{
+        position: absolute;
+        top: 25px;
+        right: 13px;
+    }
+}

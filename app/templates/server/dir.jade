@@ -1,0 +1,10 @@
+doctype html
+html(lang='en')
+    head
+        title #{title} components units test
+body(style="background-color: #0e1116;color:#b1bfc2;font-family:'Microsoft YaHei'")
+    h1 #{title} Direction Files
+    h2 #{dir} components
+    ul
+        each component in components
+            li: a(href="/__components__/#{component}.html",style="color:#b1bfc2;text-decoration:none") #{component}
